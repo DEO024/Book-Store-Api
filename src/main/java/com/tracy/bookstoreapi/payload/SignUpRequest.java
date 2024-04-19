@@ -1,13 +1,15 @@
 package com.tracy.bookstoreapi.payload;
 
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
+import javax.validation.constraints.*;
 
 public class SignUpRequest {
     @NotBlank
     @Size(min = 4, max = 40)
     private String name;
+
+    @NotBlank
+    @Size(min = 3, max = 15)
+    private String username;
 
     @NotBlank
     @Size(max = 40)
@@ -24,6 +26,14 @@ public class SignUpRequest {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getEmail() {

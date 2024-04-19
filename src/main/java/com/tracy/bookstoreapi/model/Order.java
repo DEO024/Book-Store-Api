@@ -1,12 +1,11 @@
 package com.tracy.bookstoreapi.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.tracy.bookstoreapi.model.audit.UserDateAudit;
-import jakarta.persistence.*;
-
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import java.util.HashSet;
 import java.util.Set;
+import javax.persistence.*;
+import com.tracy.bookstoreapi.model.audit.UserDateAudit;
 
 @Entity
 @Table(name = "orders")
@@ -32,13 +31,13 @@ public class Order extends UserDateAudit {
     private Long cost;
 
     @Enumerated(EnumType.STRING)
-    private OrderStatus orderStatus = OrderStatus.ORDER_CREATED;
+    private OrderStatus orderStatus = OrderStatus.ORDER_CREATED; // Corrected variable name
 
     public Order(Set<Book> books, User customer, Long cost, OrderStatus orderStatus) {
         this.books = books;
         this.customer = customer;
         this.cost = cost;
-        this.orderStatus = orderStatus;
+        this.orderStatus = orderStatus; // Corrected variable name
     }
 
     public Order() {

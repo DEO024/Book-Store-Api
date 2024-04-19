@@ -1,19 +1,19 @@
 package com.tracy.bookstoreapi.payload;
 
 public class JwtAuthenticationResponse {
-    private String token;
+    private String accessToken;
     private String tokenType = "Bearer";
 
-    public JwtAuthenticationResponse(String token) {
-        this.token = token;
+    public JwtAuthenticationResponse(String accessToken) {
+        this.accessToken = accessToken;
     }
 
-    public String getToken() {
-        return token;
+    public String getAccessToken() {
+        return accessToken;
     }
 
-    public void setToken(String token) {
-        this.token = token;
+    public void setAccessToken(String accessToken) {
+        this.accessToken = accessToken;
     }
 
     public String getTokenType() {

@@ -1,6 +1,6 @@
 package com.tracy.bookstoreapi.payload;
 
-import jakarta.validation.constraints.NotBlank;
+import javax.validation.constraints.NotBlank;
 
 public class CreateCategoryRequest {
     @NotBlank

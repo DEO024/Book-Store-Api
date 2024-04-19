@@ -36,16 +36,12 @@ public class BookService {
         newBook.setDescription(book.getDescription());
 
         book.getAuthors().forEach(authorId -> {
-//            find the author with the attached id
             Optional<Author> author = authorRepository.findById(authorId);
-
-//            add the author to the list
             author.ifPresent(value -> newBook.getAuthors().add(value));
         });
 
         book.getCategories().forEach(categoryId -> {
             Optional<Category> category = categoryRepository.findById(categoryId);
-
             category.ifPresent(value -> newBook.getCategories().add(value));
         });
 

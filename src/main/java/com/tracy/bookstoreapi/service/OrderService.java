@@ -31,7 +31,7 @@ public class OrderService {
         Order newOrder = new Order();
 
         List<Book> booksList = bookRepository.findByIdIn(order.getBookIds());
-        Optional<User> user = userRepository.findById(currentUser.id());
+        Optional<User> user = userRepository.findById(currentUser.getId());
 
         user.ifPresent(newOrder::setCustomer);
         newOrder.getBooks().addAll(booksList);
