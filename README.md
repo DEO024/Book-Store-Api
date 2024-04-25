@@ -1,9 +1,5 @@
 ```markdown 
 
-## NAJJOBA TRACY A95681 S21B23-034
-
-
-
 # Bookstore Inventory System API Project
 
 ## Introduction
